@@ -1,0 +1,21 @@
+<div class="back">
+  <div class="mid">
+      <div class="up">
+          <h1>City</h1>
+          <div class="search">
+            <input type="text" id='cityName'   class="form-control">
+            <button type="button" class="btn btn-primary"  (click)="getweatherdatabycity()"><i data-feather="map-pin">Change Location</i></button>
+          </div>
+      </div>
+      <div class="down">
+          <p class="card-text"> Temperature:<span>{{weatherdata.main.temp}}°C</span> </p>
+          <p class="card-text"> Humidity: <span>{{weatherdata.main.humidity}}%</span></p>
+          <p class="card-text"> Feels like:<span>{{weatherdata.main.feels_like}}°C</span> </p>
+          <p class="card-text"> Pressure:<span>{{weatherdata.main.pressure}} hPa</span> </p>  
+          <p>Date:{{TodayDate | date: 'd' }}/{{TodayDate | date: 'MM' }}/{{TodayDate | date: 'yy' }}</p>
+          <p>{{TodayDate | date:'EEEE'}}</p>
+      </div>
+  </div>
+</div>
+
+
